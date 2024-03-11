@@ -86,8 +86,11 @@ h1 {
 /* ========================================================================== /  
     Content, overlays
 
-    CSS adapted from:
+    Base CSS adapted from:
     https://www.w3schools.com/howto/howto_css_image_overlay.asp
+
+    GIF play on hover adapted from:
+    https://stackoverflow.com/questions/27752500/how-to-have-an-anim-gif-on-a-link-and-play-it-on-hover-and-reset
 / ========================================================================== */
 
 .content {
