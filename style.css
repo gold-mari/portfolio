@@ -80,7 +80,7 @@ h1 {
 
 .content:hover {
     background-color: #fff1aa;
-    box-shadow: 0 4px 8px 0 rgba(73, 61, 0, 0.2);
+    box-shadow: 0 4px 8px 0 #493d0033;
 }
 
 .overlay-container {
