@@ -11,7 +11,7 @@
 body {
     background-color: #fafafa;
     padding: 20px;
-    font-family: Arial;
+    font-family: 'Poppins';
 }
   
 /* Center website */
@@ -31,12 +31,16 @@ h1 {
     margin-right: auto;
     margin-top: 0;
     margin-bottom: 0;
-    
+
     width: 50%;
     min-width: 400px;
     max-width: 500px;
 }
-  
+
+/* ========================================================================== /  
+    Gallery rows and columns
+/ ========================================================================== */
+
 .row {
     margin: 8px -16px;
 }
@@ -61,20 +65,69 @@ h1 {
     clear: both;
 }
   
-/* Content */
+/* ========================================================================== /  
+    Content, overlays
+
+    CSS adapted from:
+    https://www.w3schools.com/howto/howto_css_image_overlay.asp
+/ ========================================================================== */
+
 .content {
     background-color: white;
-    padding: 10px;
+    padding: 20px;
+}
+
+.content:hover {
+    background-color: #fff1aa;
+    box-shadow: 0 4px 8px 0 rgba(73, 61, 0, 0.2);
+}
+
+.overlay-container {
+    position: relative;
+}
+
+.overlay-container img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
   
-/* Responsive layout - makes a two column-layout instead of four columns */
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #333;
+
+    transition: .5s ease;
+    opacity: 0;
+}
+
+.overlay p {
+    color: white;
+    font-size: 18px;
+    padding: 40px;
+}
+  
+.overlay-container:hover .overlay {
+    opacity: 90%;
+}
+  
+
+/* ========================================================================== /  
+    Responsive layout
+/ ========================================================================== */
+
+/* Makes a two column-layout instead of four columns */
 @media screen and (max-width: 900px) {
     .column {
         width: 50%;
     }
 }
-  
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+/* Makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
     .column {
         width: 100%;
