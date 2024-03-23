@@ -22,7 +22,78 @@
         <img src="/assets/logo-header.png" alt="Dylan Mahler: Gameplay Programmer & Music Producer" class="banner">
 
         <hr>
-        <h1>Runic Rumble</h1>
+        <h1>Runic Rumble [PROTOTYPE]</h1>
+        <a href="/index.html">Back to projects!</a>
+        <hr>
+
+        <h2>Overview</h2>
+        <p><strong>Runic Rumble</strong> is a realtime card-based battler that me and a group of 8 other developers worked
+            on as a part of UC Santa Cruz's games major capstone. I assisted as an external collaborator, and served as a
+            tools programmer and a systems designer in Unity, using C#.
+        </p>
+
+        <p><strong>This is a prototype portfolio section. Things will not be described in full detail, and most images
+            will be omitted, but I'd prefer to have something rather than nothing!
+        </strong></p>
+
+        <a href="#card">Card Authoring Tools</a><br />
+        <a href="#status">Status Effect System</a><br />
+        <a href="#entity">Entity Framework Design</a><br />
+
+        <hr>
+
+        <h2>Contribution Highlights</h2>
+
+        <h3 id="card">Card Authoring Tools</h3>
+        <p>In Runic Rumble, the player attacks and interacts with enemies through the use of a diverse set of cards with 
+            different combinations of effects. Card effects span dealing damage, applying status effects, instantiating
+            game objects, and more. I was responsible for the initial development of the card and card effect system,
+            developed many of the core effects, and supported other programmers in developing further effects.
+            
+            My priorities for this system were:
+            <ul>
+                <li><strong>Flexibility:</strong> Card effects should be able to do anything. Cards should be able to have any
+                    number of effects.</li>
+                <li><strong>Designer-friendliness:</strong> New cards should be simple to create and edit for non-programmers. 
+                    The creation of new card effects should be made as easy as possible for non-programmers.</li>
+            </ul>
+
+            Using the Scriptable Object system in Unity, I developed a base Card class which card assets would be created from.
+        </p>
+
+        <p><strong>[MORE IMPLEMENTATION DETAILS GO HERE ... CUSTOM CARD EDITOR, POLYMORPHIC BASE CARDEFFECT CLASS, AUTOMATIC SUBCLASS RECOGNITION]</strong></p>
+        <p><strong>[GIFS AND SCREENSHOTS GO HERE]</strong></p>
+
+        <h3 id="entity">Entity Trait Framework</h3>
+        <p>At the beginning of the quarter, I designed a component system that would allow all entities in the game- from the 
+            player, to enemies, to stage hazards- to be built from the same framework. An entity in Runic Rumble is defined as
+            a game object possessing some combination of traits, including:
+            <ul>
+                <li><strong>Damageable</strong>: This entity has health, can be damaged, and can die.</li>
+                <li><strong>Targetable</strong>: This entity has a "team" affiliation (Player-team vs Enemy-team), and can be directly targeted
+                    by a card.</li>
+                <li><strong>Effectable</strong>: This entity can have status effects applied to them.</li>
+            </ul>
+            Each separate trait was implemented as a separate C# script, and each entity was implemented as a Unity GameObject.
+            In order to add traits to an entity, a designer would just need to add components to the GameObject, a very simple
+            Unity operation.
+        </p>
+
+        <p>
+            This system was iterated on over the course of the 3 months of development: components were added due to new
+            functionality elsewhere, and dropped due to a lack of use cases. The flexibility of this system allowed for these
+            course-corrections to be simple and painless, since there were no hard-coded dependencies.
+        </p>
+
+        <p><strong>[GIFS AND SCREENSHOTS GO HERE]</strong></p>
+
+        <h3 id="status">Status Effect System</h3>
+        <p>
+            <strong>[WORK IN PROGRESS]</strong>
+        </p>
+
+        <hr> 
+
         <a href="/index.html">Back to projects!</a>
         
     <!-- END MAIN -->
